@@ -1,0 +1,28 @@
+.header {
+    background-color: rgb(102 187 106);
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.hello-user {
+    display: flex;
+    width: 288px;
+    height: 45px;
+    font-size: 30px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.motivate {
+    display: flex;
+    color: white;
+    height: 45px;
+    width: 540px;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
