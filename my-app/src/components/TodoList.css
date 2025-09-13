@@ -1,5 +1,67 @@
+.todo-scroll {
+    padding-top: 10px;
+    height: 1000px;
+    width: 800px;
+    background-color: rgb(155, 173, 141);
+    overflow-y: auto;
+}
 .taskcard {
-    width: 200px;
-    height: 100px;
+    width: 700px;
+    height: 100%;
+    margin-left: 20px;
+    margin-top: 20px;
+    padding: 5px;
+    border: 1px solid rgb(61, 61, 61);
+    border-radius: 30px;
     background-color: lightblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.task-info {
+    margin: 0;
+    font-size: 20px;
+    display: inline-block;
+}
+.remove-button {
+    border-radius: 30px;
+    border: none;
+}
+.remove-button:hover {
+    background-color: rgb(143, 134, 134);
+}
+.remove-icon {
+    width: 30px;
+}
+.input-bar {
+    width: 700px; 
+    height: 30px;
+    margin-left: 20px;
+    padding-left: 30px;
+    border: none;
+    border-radius: 100px;
+    font-size: larger;
+}
+.notasktodo {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+.add-row {
+    display: flex;
+    justify-content: center;
+}
+.add-button {
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+}  
+.add-button:hover {
+    background-color: rgb(143, 134, 134);
+} 
+.add-icon {
+    width: 35px;
 }
