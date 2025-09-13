@@ -1,4 +1,4 @@
-import "./sidebar.css"
+import "./Sidebar.css"
 import homeicon from '../assets/homeicon.svg'
 import graph_icon from '../assets/graph_icon.svg'
 function Sidebar () {

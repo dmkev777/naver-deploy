@@ -16,14 +16,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 .home_button:hover{
     background: linear-gradient(90deg,rgb(35, 103, 130) 0%, rgb(72, 168, 112) 50%, rgb(193, 180, 66) 100%);
 }
+.home_button:active{
+    background: linear-gradient(90deg,rgb(35, 103, 130) 0%, rgb(72, 168, 112) 50%, rgb(193, 180, 66) 100%);
+    box-shadow: 1px 0px 5px black;
+}
 .home_icon {
     width: 30px;
     display: flex;
-    
 }
 .graph_button {
     width: 100px;
@@ -33,9 +37,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 .graph_button:hover{
     background: linear-gradient(90deg,rgb(35, 103, 130) 0%, rgb(72, 168, 112) 50%, rgb(193, 180, 66) 100%);
+}
+.graph_button:active{
+    background: linear-gradient(90deg,rgb(35, 103, 130) 0%, rgb(72, 168, 112) 50%, rgb(193, 180, 66) 100%);
+    box-shadow: 1px 0px 5px black;
 }
 .graph_icon {
     width: 40px;
