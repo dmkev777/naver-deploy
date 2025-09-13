@@ -1,5 +1,6 @@
 .sidebar {
-    background-color: rgb(102 187 106);
+    background: #2A7B9B;
+    background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
     width: 100px;
     position: fixed;
     top: 45px;
@@ -10,14 +11,14 @@
 .home_button {
     width: 100px;
     height: 200px;
-    background-color: rgb(102 187 106);
+    background-color: transparent;
     border: none;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .home_button:hover{
-    background-color: rgb(84, 144, 87);
+    background: linear-gradient(90deg,rgb(35, 103, 130) 0%, rgb(72, 168, 112) 50%, rgb(193, 180, 66) 100%);
 }
 .home_icon {
     width: 30px;
@@ -27,14 +28,14 @@
 .graph_button {
     width: 100px;
     height: 200px;
-    background-color: rgb(102 187 106);
+    background-color: transparent;
     border: none;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .graph_button:hover{
-    background-color: rgb(84, 144, 87);;
+    background: linear-gradient(90deg,rgb(35, 103, 130) 0%, rgb(72, 168, 112) 50%, rgb(193, 180, 66) 100%);
 }
 .graph_icon {
     width: 40px;
