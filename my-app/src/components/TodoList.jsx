@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { use, useEffect } from 'react'
 import { useState } from 'react'
 import add_icon from '../assets/add_icon.svg'
 import remove_icon from '../assets/remove_icon.svg'
@@ -7,16 +7,42 @@ import './TodoList.css'
 const statuses = ["undone", "inprogress", "done"];
 
 
+
 // status = {done, inprogress, undone}
-function TaskCard({task, id, status, onRemove, onStatus}) {
+function TaskCard({task, id, status, onRemove, onStatus, onEdit}) {
+    const [isEditing, setIsEditing] = useState(false);
+    const [editText, setEditText] = useState(task);
+    function handleSave() {
+        if (editText.trim()==='') return;
+        onEdit(id, editText);
+        setIsEditing(false);
+    }
     return <div className={`taskcard ${status}`}>
-        <p className='task-info'>Task: {task}</p>
-        <div className='button-row'>
-        <button className='toggle-status' onClick={()=> onStatus(id)}/>
-        <button className='remove-button' onClick={()=> onRemove(id)}> <img className='remove-icon' src={remove_icon}/> </button>
-        </div>
-        
-    </div>
+            {isEditing? 
+            (<>
+            <input class='edit-bar'value={editText} onChange={(e)=> setEditText(e.target.value)}/>  
+            <div className='button-row'>
+            <button className='save-button' onClick={()=>handleSave()}
+            >save</button>
+            <button className='discard-button' onClick={()=>setIsEditing(false)}
+            >discard</button>
+            <button className='toggle-status' onClick={()=> onStatus(id)}/>
+            <button className='remove-button' onClick={()=> onRemove(id)}> <img className='remove-icon' src={remove_icon}/> </button>
+            </div>
+            </>)
+             : 
+            (<>
+            <p className='task-info'>{task}</p>
+            <div className='button-row'>
+            <button className='edit-button'
+            onClick={()=>setIsEditing(true)}
+            >edit</button>
+            <button className='toggle-status' onClick={()=> onStatus(id)}/>
+            <button className='remove-button' onClick={()=> onRemove(id)}> <img className='remove-icon' src={remove_icon}/> </button>
+            </div>
+
+            </>)}
+        </div>  
 }
 
 
@@ -44,7 +70,12 @@ function TodoList() {
                 const next = (idx+1)%3;
                 return task.id === id ? {...task, status: statuses[next]} : task;
             }))
-           
+        }
+        function handleEdit (id, newText) {
+            setTasks(prev => prev.map(task =>
+            {
+                return task.id === id? {...task, text: newText} : task
+            }))
         }
         
 
@@ -59,7 +90,7 @@ function TodoList() {
     <div>   
         {tasks.length === 0 ?  (<div className='notasktodo'>No task to do</div>) : 
         ( tasks.map(task => 
-        <TaskCard key={task.id} task={task.text} id={task.id} status={task.status} onRemove={handleRemove} onStatus={toggleStatus}/>)
+        <TaskCard key={task.id} task={task.text} id={task.id} status={task.status} onRemove={handleRemove} onStatus={toggleStatus} onEdit={handleEdit}/>)
         )
         }
     </div>
