@@ -7,25 +7,61 @@
 }
 .taskcard {
     width: 700px;
-    height: 100%;
+    height: auto;
     margin-left: 20px;
     margin-top: 20px;
     padding: 5px;
+    padding-left: 10px;
     border: 1px solid rgb(61, 61, 61);
     border-radius: 30px;
-    background-color: lightblue;
     display: flex;
+    align-items: center; 
     justify-content: space-between;
-    align-items: center;
+}
+.done {
+    background-color: rgb(48, 145, 48);
+}
+.inprogress {
+    background-color: rgb(189, 189, 85);
+}
+.undone {
+    background-color: rgba(255, 0, 0, 0.532);
 }
 .task-info {
     margin: 0;
     font-size: 20px;
-    display: inline-block;
+    max-width: 600px;
+    word-wrap: break-word;      
+    overflow-wrap:break-word;
+    white-space: normal; 
+}
+.button-row {
+    display: flex;
+    align-items: center;
+}
+.toggle-status {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    border: none;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+.toggle-status:hover {
+    background-color: rgb(143, 134, 134);
 }
 .remove-button {
     border-radius: 30px;
     border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;
+    cursor: pointer;
 }
 .remove-button:hover {
     background-color: rgb(143, 134, 134);
@@ -58,6 +94,7 @@
     border-radius: 100%;
     display: flex;
     justify-content: center;
+    margin-left: 5px;
 }  
 .add-button:hover {
     background-color: rgb(143, 134, 134);

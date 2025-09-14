@@ -10,7 +10,7 @@
 }
 .home_button {
     width: 100px;
-    height: 200px;
+    height: 350px;
     background-color: transparent;
     border: none;
     display: flex;
@@ -31,7 +31,7 @@
 }
 .graph_button {
     width: 100px;
-    height: 200px;
+    height: 350px;
     background-color: transparent;
     border: none;
     display: flex;
