@@ -2,6 +2,10 @@ import React, { use, useEffect } from 'react'
 import { useState } from 'react'
 import add_icon from '../assets/add_icon.svg'
 import remove_icon from '../assets/remove_icon.svg'
+import toggle_icon from '../assets/toggle_icon.svg'
+import edit_icon from '../assets/edit_button.svg'
+import discard_icon from '../assets/discard_icon.svg'
+import save_icon from '../assets/save_icon.svg'
 import './TodoList.css'
 import Graph from './Graph'
 import './Graph.css'
@@ -27,10 +31,9 @@ function TaskCard({task, id, status, onRemove, onStatus, onEdit}) {
             <input class='edit-bar'value={editText} onChange={(e)=> setEditText(e.target.value)}/>  
             <div className='button-row'>
             <button className='save-button' onClick={()=>handleSave()}
-            >save</button>
+            ><img className='save-icon' src={save_icon}/></button>
             <button className='discard-button' onClick={()=>setIsEditing(false)}
-            >discard</button>
-            
+            ><img className='discard-icon' src={discard_icon}/></button>
             </div>
             </>)
              : 
@@ -38,11 +41,10 @@ function TaskCard({task, id, status, onRemove, onStatus, onEdit}) {
             <p className='task-info'>{task}</p>
             <div className='button-row'>
             <button className='edit-button'
-            onClick={()=>setIsEditing(true)}
-            >edit</button>
+            onClick={()=>setIsEditing(true)}><img className='edit-icon' src={edit_icon}/></button>
             </div>
             </>)}
-            <button className='toggle-status' onClick={()=> onStatus(id)}/>
+            <button className='toggle-status' onClick={()=> onStatus(id)}><img className='toggle-icon' src={toggle_icon}/></button>
             <button className='remove-button' onClick={()=> onRemove(id)}> <img className='remove-icon' src={remove_icon}/> </button>
         </div>  
 }

@@ -8,8 +8,8 @@ ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 
 function Graph({tasks}) {
     const [chartData, setChartData] = useState(
-        { labels: ["Undone", "Inprogress", "Done"],
-          datasets: [{label: "Tasks", data: [0,0,0], backgroundColor: ["#b43f3fff", "#a4b534ff", "#4e8e32ff"]}]
+        { labels: ["Not started", "In progress", "Done"],
+          datasets: [{label: "Tasks", data: [0,0,0], backgroundColor: ["#bc4749", "#99582a", "#386641"]}]
         }
     )
     useEffect(()=> {
@@ -32,7 +32,7 @@ function Graph({tasks}) {
         x: {
       ticks: {
         callback: (val, index) => {
-          const labels = ["❌ Undone", "⚡ Inprogress", "✅ Done"];
+          const labels = ["❌ Not started", "⚡ In progress", "✅ Done"];
           return labels[index];
         },
         color: "#000000ff", // màu chữ

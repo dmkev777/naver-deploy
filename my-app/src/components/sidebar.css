@@ -1,6 +1,5 @@
 .sidebar {
-    background: #2A7B9B;
-    background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+    background: #132a13;
     width: 100px;
     position: fixed;
     top: 45px;
@@ -19,10 +18,10 @@
     cursor: pointer;
 }
 .home_button:hover{
-    background: linear-gradient(90deg,rgb(35, 103, 130) 0%, rgb(72, 168, 112) 50%, rgb(193, 180, 66) 100%);
+    background: #1a391a;
 }
 .home_button:active{
-    background: linear-gradient(90deg,rgb(35, 103, 130) 0%, rgb(72, 168, 112) 50%, rgb(193, 180, 66) 100%);
+    background: #1a391a;
     box-shadow: 1px 0px 5px black;
 }
 .home_icon {
@@ -40,10 +39,10 @@
     cursor: pointer;
 }
 .graph_button:hover{
-    background: linear-gradient(90deg,rgb(35, 103, 130) 0%, rgb(72, 168, 112) 50%, rgb(193, 180, 66) 100%);
+    background: #1a391a;
 }
 .graph_button:active{
-    background: linear-gradient(90deg,rgb(35, 103, 130) 0%, rgb(72, 168, 112) 50%, rgb(193, 180, 66) 100%);
+    background: #1a391a;
     box-shadow: 1px 0px 5px black;
 }
 .graph_icon {
