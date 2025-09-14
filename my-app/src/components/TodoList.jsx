@@ -3,9 +3,13 @@ import { useState } from 'react'
 import add_icon from '../assets/add_icon.svg'
 import remove_icon from '../assets/remove_icon.svg'
 import './TodoList.css'
+import Graph from './Graph'
+import './Graph.css'
+import { Bar } from 'react-chartjs-2'
+
+
 
 const statuses = ["undone", "inprogress", "done"];
-
 
 
 // status = {done, inprogress, undone}
@@ -26,8 +30,7 @@ function TaskCard({task, id, status, onRemove, onStatus, onEdit}) {
             >save</button>
             <button className='discard-button' onClick={()=>setIsEditing(false)}
             >discard</button>
-            <button className='toggle-status' onClick={()=> onStatus(id)}/>
-            <button className='remove-button' onClick={()=> onRemove(id)}> <img className='remove-icon' src={remove_icon}/> </button>
+            
             </div>
             </>)
              : 
@@ -37,11 +40,10 @@ function TaskCard({task, id, status, onRemove, onStatus, onEdit}) {
             <button className='edit-button'
             onClick={()=>setIsEditing(true)}
             >edit</button>
+            </div>
+            </>)}
             <button className='toggle-status' onClick={()=> onStatus(id)}/>
             <button className='remove-button' onClick={()=> onRemove(id)}> <img className='remove-icon' src={remove_icon}/> </button>
-            </div>
-
-            </>)}
         </div>  
 }
 
@@ -80,6 +82,7 @@ function TodoList() {
         
 
   return (
+    <div className='first-page'>
     <div className='todo-scroll'>
     <form className='add-row' onSubmit={handleAdd}>
         <input className='input-bar' value={text} onChange={e => setText(e.target.value)} placeholder='Add task (e.g: Work - 19/8/25)'/>
@@ -93,6 +96,10 @@ function TodoList() {
         <TaskCard key={task.id} task={task.text} id={task.id} status={task.status} onRemove={handleRemove} onStatus={toggleStatus} onEdit={handleEdit}/>)
         )
         }
+    </div>
+    </div>
+    <div class='graph'>
+    <Graph tasks={tasks}/>
     </div>
     </div>
   )
