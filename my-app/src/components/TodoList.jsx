@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react'
 import './TodoList.css'
 import remove_icon from '../assets/remove_icon.svg'
@@ -13,8 +13,12 @@ function TaskCard({task, id, onRemove}) {
 
 
 function TodoList() {
-        const [tasks, setTasks] = useState([]);
+        const [tasks, setTasks] = useState(()=> {
+            const saved = localStorage.getItem("tasks");
+            return saved ? JSON.parse(saved) :[];
+        });
         const [text, setTexts] = useState('');
+        useEffect(()=> {localStorage.setItem("tasks", JSON.stringify(tasks))}, [tasks]);
         function handleAdd (e) {
             e.preventDefault();
             const val = text.trim();
