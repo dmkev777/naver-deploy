@@ -31,9 +31,9 @@ function App() {
 
   return (
     <>
-    <Header quote={quote}/>
+    <Header theme={theme} quote={quote}/>
     <Router>
-      <Sidebar/>
+      <Sidebar theme={theme}/>
       <Routes>
         <Route path='/' element={<HomePage theme={theme}/>} />
         <Route path='/settings' element={<Settings theme={theme} setTheme={setTheme} setQuote={setQuote} quote={quote}/>} />

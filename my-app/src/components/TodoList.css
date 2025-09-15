@@ -7,15 +7,14 @@
     padding-top: 10px;
     height: 1000px;
     width: 800px;
-    background-color: transparent;
     overflow-y: auto;
     
 }
 .todo-scroll.theme-light {
-background-color: #c0c681;
+background-color: #cbc6b0;
 }
 .todo-scroll.theme-dark {
-background-color: #3a3e0c;   
+background-color: #3C3D37;   
 }
 .todo-scroll.theme-pastel {
 background-color: #9f9f9f;    
@@ -33,14 +32,32 @@ background-color: #9f9f9f;
     align-items: center; 
 
 }
-.done {
+.done.theme-light {
+    background-color: #219b3b;
+}
+.inprogress.theme-light {
+    background-color: #bebe23;
+}
+.undone.theme-light {
+    background-color: #b83c3e;
+}
+.done.theme-dark {
     background-color: #386641;
 }
-.inprogress {
-    background-color: #99582a;
+.inprogress.theme-dark {
+    background-color: #7a4723;
 }
-.undone {
-    background-color: #bc4749;
+.undone.theme-dark {
+    background-color: #9b393b;
+}
+.done.theme-pastel {
+    background-color: #5a9565fc;
+}
+.inprogress.theme-pastel {
+    background-color: #a59a5b;
+}
+.undone.theme-pastel {
+    background-color: #ac6061;
 }
 .edit-bar {
     border: none;

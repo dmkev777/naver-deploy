@@ -2,14 +2,14 @@ import "./Sidebar.css"
 import homeicon from '../assets/homeicon.svg'
 import settings_icon from '../assets/settings_icon.svg'
 import { NavLink } from "react-router-dom"
-function Sidebar () {
+function Sidebar ({theme}) {
     return (
-        <div className="sidebar">
+        <div className={`${theme} sidebar`}>
             <NavLink
             to="/"
             className={({ isActive }) => isActive ? "active" : ""}
             >
-                <button className="home_button">
+                <button className={`${theme} home_button`}>
                 <img className="home_icon"  src={homeicon}/>
                 </button>
             </NavLink>
@@ -17,7 +17,7 @@ function Sidebar () {
             to="/settings"
             className={({ isActive }) => isActive ? "active" : ""}
             >
-            <button className="graph_button">
+            <button className={`${theme} graph_button`}>
             <img className="graph_icon"  src={settings_icon}/>
             </button>
             </NavLink>

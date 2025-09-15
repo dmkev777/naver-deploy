@@ -1,8 +1,8 @@
 import "./Header.css";
 
-function Header({quote}) {
+function Header({quote, theme}) {
     return (
-        <div className="header">
+        <div className={`${theme} header`}>
             <div className="hello-user"> Welcome back! </div>
             <div className="motivate">{quote}</div>
         </div>

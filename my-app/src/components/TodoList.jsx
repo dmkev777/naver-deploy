@@ -17,7 +17,7 @@ const statuses = ["undone", "inprogress", "done"];
 
 
 // status = {done, inprogress, undone}
-function TaskCard({task, id, status, onRemove, onStatus, onEdit}) {
+function TaskCard({task, id, status, onRemove, onStatus, onEdit, theme}) {
     const [isEditing, setIsEditing] = useState(false);
     const [editText, setEditText] = useState(task);
     function handleSave() {
@@ -25,7 +25,7 @@ function TaskCard({task, id, status, onRemove, onStatus, onEdit}) {
         onEdit(id, editText);
         setIsEditing(false);
     }
-    return <div className={`taskcard ${status}`}>
+    return <div className={`taskcard ${status} ${theme}`}>
             {isEditing? 
             (<>
             <input className='edit-bar'value={editText} onChange={(e)=> setEditText(e.target.value)}/>  
@@ -95,7 +95,7 @@ function TodoList({theme}) {
     <div>   
         {tasks.length === 0 ?  (<div className='notasktodo'>No task to do</div>) : 
         ( tasks.map(task => 
-        <TaskCard key={task.id} task={task.text} id={task.id} status={task.status} onRemove={handleRemove} onStatus={toggleStatus} onEdit={handleEdit}/>)
+        <TaskCard theme={theme} key={task.id} task={task.text} id={task.id} status={task.status} onRemove={handleRemove} onStatus={toggleStatus} onEdit={handleEdit}/>)
         )
         }
     </div>

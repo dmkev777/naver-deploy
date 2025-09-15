@@ -1,5 +1,4 @@
 .header {
-    background: #132a13;
     height: 45px;
     display: flex;
     flex-direction: row;
@@ -9,6 +8,16 @@
     right: 0;
     top: 0;
 }
+.theme-light.header {
+    background-color: #3D74B6;
+}
+.theme-dark.header {
+    background-color: #0F0F0F;
+}
+.theme-pastel.header {
+    background-color: #57564F;
+}
+
 .hello-user {
     display: flex;
     width: 288px;
@@ -24,7 +33,7 @@
     display: flex;
     color: white;
     height: 45px;
-    width: 540px;
+    width: 900px;
     font-size: 30px;
     justify-content: center;
     align-items: center;

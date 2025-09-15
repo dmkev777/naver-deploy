@@ -3,8 +3,10 @@
     justify-content: space-between;
     align-items: top;
 }
+.settings-header {
+    margin-top: 50px;
+}
 .theme-div {
-    background-color: lightpink;
     width: 500px;
     height: 500px;
     margin-top: 20px;
@@ -13,6 +15,16 @@
     justify-content: top;
     flex-direction: column;
     align-items: center;
+    border-radius: 100px;
+}
+.theme-div.theme-light {
+    background-color: #cbc6b0;
+}
+.theme-div.theme-dark {
+    background-color: #3C3D37;
+}
+.theme-div.theme-pastel {
+    background-color: #9f9f9f;
 }
 .theme-option {
     width: 500px;
@@ -29,6 +41,7 @@
     margin-top: 10px;
     font-size: 14px;
     transition: 0.2s ease;
+    font-weight: 700;
 }
 .theme-spec:hover {
     background-color: grey;
@@ -39,19 +52,46 @@
     box-shadow: 0px 0px 5px black;
 }
 .theme-paragraph {
+    text-align: center;
     font-size: 25px;
+    border-radius: 30px;
+    height: 45px;
+    width: 450px;
+    padding-top: 20px;
+}
+.theme-paragraph.theme-light {
+    background-color: #FBF5DE;
+    color: black;
+}
+.theme-paragraph.theme-dark {
+    background-color: #5C5470;
+    color: rgb(213, 204, 204);
+}
+.theme-paragraph.theme-pastel {
+    background-color: #DDDAD0;
+    color: #9f9f9f;
 }
 .quote-row {
     display: flex;
     width: 800px;
     margin-right: 20px;
     margin-top: 20px;
-    flex-direction: row;
-    background-color: aquamarine;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
+.quote-row.theme-light {
+    background-color: #cbc6b0;
+}
+.quote-row.theme-dark {
+    background-color: #3C3D37;
+}
+.quote-row.theme-pastel {
+    background-color: #9f9f9f;
 }
 .quote-bar {
-    margin-top: 20px;
+    margin-top: 0px;
     padding-left: 20px;
     width: 600px;
     border: none;
@@ -59,10 +99,9 @@
     border-radius: 50px;
     display: flex;
     font-size: 20px;
-
 }
 .quote-submit {
-    margin-top: 20px;
+    margin-top: 0px;
     display: flex;
     width: 100px;
     height: 30px;
@@ -73,6 +112,7 @@
     align-items: center;
     justify-content: center;
     font-size: 15px;
+    font-weight: 700;
     transition: 0.2s ease;
 }
 .quote-submit:hover {
@@ -82,4 +122,67 @@
     background-color: grey;
     opacity: 0.7;
     box-shadow: 0px 0px 5px black;
+}
+.quote-example {
+    width: 700px;
+    height: 350px;
+    display: block;
+    border-radius: 20px;
+    padding-top: 10px;
+    overflow-y: auto;
+}
+.quote-example.theme-light {
+    background-color: #FBF5DE;
+}
+.quote-example.theme-dark {
+    background-color: #5C5470;
+}
+.quote-example.theme-pastel {
+    background-color: #DDDAD0;
+}
+.quote-input-row {
+    width: 700px;
+    height: 50px;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+}
+.quote-card {
+    width: 675px;
+    height: 35px;
+    margin-top: 10px;
+    margin-left: 8px;
+    border-radius: 50px;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+}
+.quote-card.theme-light {
+    background-color: #b75141;
+    color: white;
+}
+.quote-card.theme-dark {
+    background-color: #3F2E3E;
+    color: white;
+}
+.quote-card.theme-pastel {
+    background-color: #d5d3d3;
+    color: rgb(70, 69, 69);
+}
+
+.quote-card.theme-light:hover{
+    background-color: #8d4135;
+}
+.quote-card.theme-dark:hover{
+    background-color: #553e53;
+}
+.quote-card.theme-pastel:hover{
+    background-color: #a8a8a8;
 }
