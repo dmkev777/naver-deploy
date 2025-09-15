@@ -1,10 +1,10 @@
 import { use, useEffect, useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
-import Header from './components/Header'
-import Sidebar from './components/Sidebar'
-import HomePage from './pages/Home'
-import Settings from './pages/Settings'
+import Header from './components/Header.jsx'
+import Sidebar from './components/Sidebar.jsx'
+import HomePage from './pages/Home.jsx'
+import Settings from './pages/Settings.jsx'
 function App() {
   const [theme, setTheme]=useState("theme-light");
   const [quote, setQuote]=useState("Discipline is the key");
