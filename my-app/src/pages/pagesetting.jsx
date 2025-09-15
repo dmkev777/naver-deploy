@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './pagesetting.css'
 
-function MotivationalQuotes ({quote, theme, onClick, setText})
+function MotivationalQuotes ({quote, theme, onClick,})
 {
   return (<>
   <div className={`${theme} quote-card`} onClick={() => onClick && onClick(quote)}>
