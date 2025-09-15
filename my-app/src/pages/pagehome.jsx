@@ -1,5 +1,5 @@
 import React from 'react'
-import TodoList from '../components/todoList.jsx'
+import TodoList from '../components/todolist.jsx'
 
 function HomePage({theme}) {
   return (
