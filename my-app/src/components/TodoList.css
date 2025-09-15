@@ -9,7 +9,16 @@
     width: 800px;
     background-color: transparent;
     overflow-y: auto;
-    background-color: #c0c681;
+    
+}
+.todo-scroll.theme-light {
+background-color: #c0c681;
+}
+.todo-scroll.theme-dark {
+background-color: #3a3e0c;   
+}
+.todo-scroll.theme-pastel {
+background-color: #9f9f9f;    
 }
 .taskcard {
     margin-left: 20px;

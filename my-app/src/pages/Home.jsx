@@ -1,10 +1,10 @@
 import React from 'react'
 import TodoList from '../components/TodoList'
 
-function HomePage() {
+function HomePage({theme}) {
   return (
     <>
-    <TodoList/>
+    <TodoList theme={theme}/>
     </>
   )
 }

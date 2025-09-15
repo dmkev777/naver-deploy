@@ -1,6 +1,6 @@
 import "./Sidebar.css"
 import homeicon from '../assets/homeicon.svg'
-import graph_icon from '../assets/graph_icon.svg'
+import settings_icon from '../assets/settings_icon.svg'
 import { NavLink } from "react-router-dom"
 function Sidebar () {
     return (
@@ -14,11 +14,11 @@ function Sidebar () {
                 </button>
             </NavLink>
             <NavLink
-            to="/report"
+            to="/settings"
             className={({ isActive }) => isActive ? "active" : ""}
             >
             <button className="graph_button">
-            <img className="graph_icon"  src={graph_icon}/>
+            <img className="graph_icon"  src={settings_icon}/>
             </button>
             </NavLink>
             

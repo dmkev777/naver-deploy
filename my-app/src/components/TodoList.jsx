@@ -50,7 +50,7 @@ function TaskCard({task, id, status, onRemove, onStatus, onEdit}) {
 }
 
 
-function TodoList() {
+function TodoList({theme}) {
         const [tasks, setTasks] = useState(()=> {
             const saved = localStorage.getItem("tasks");
             return saved ? JSON.parse(saved) :[];
@@ -85,10 +85,10 @@ function TodoList() {
 
   return (
     <div className='first-page'>
-    <div className='todo-scroll'>
-    <form className='add-row' onSubmit={handleAdd}>
-        <input className='input-bar' value={text} onChange={e => setText(e.target.value)} placeholder='Add task (e.g: Work - 19/8/25)'/>
-        <button className='add-button' type='submit'>
+    <div className={`${theme} todo-scroll`}>
+        <form className='add-row' onSubmit={handleAdd}>
+            <input className='input-bar' value={text} onChange={e => setText(e.target.value)} placeholder='Add task (e.g: Work - 19/8/25)'/>
+            <button className='add-button' type='submit'>
         <img className='add-icon' src={add_icon}/>
         </button >
     </form>
