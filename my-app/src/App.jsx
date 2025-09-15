@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 import Header from './components/header.jsx'
 import Sidebar from './components/sidebar.jsx'
-import HomePage from './pages/home.jsx'
-import Settings from './pages/settings.jsx'
+import HomePage from './pages/pagehome.jsx'
+import Settings from './pages/pagesetting.jsx'
 function App() {
   const [theme, setTheme]=useState("theme-light");
   const [quote, setQuote]=useState("Discipline is the key");
