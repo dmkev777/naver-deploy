@@ -6,9 +6,9 @@ import toggle_icon from '../assets/toggle_icon.svg'
 import edit_icon from '../assets/edit_button.svg'
 import discard_icon from '../assets/discard_icon.svg'
 import save_icon from '../assets/save_icon.svg'
-import './TodoList.css'
-import Graph from './Graph.jsx'
-import './Graph.css'
+import './todoList.css'
+import Graph from './graph.jsx'
+import './graph.css'
 import { Bar } from 'react-chartjs-2'
 
 

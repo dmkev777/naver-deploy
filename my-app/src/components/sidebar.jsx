@@ -1,4 +1,4 @@
-import "./Sidebar.css"
+import "./sidebar.css"
 import homeicon from '../assets/homeicon.svg'
 import settings_icon from '../assets/settings_icon.svg'
 import { NavLink } from "react-router-dom"

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './Settings.css'
+import './settings.css'
 
 function MotivationalQuotes ({quote, theme, onClick, setText})
 {
