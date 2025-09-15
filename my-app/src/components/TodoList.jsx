@@ -28,7 +28,7 @@ function TaskCard({task, id, status, onRemove, onStatus, onEdit}) {
     return <div className={`taskcard ${status}`}>
             {isEditing? 
             (<>
-            <input class='edit-bar'value={editText} onChange={(e)=> setEditText(e.target.value)}/>  
+            <input className='edit-bar'value={editText} onChange={(e)=> setEditText(e.target.value)}/>  
             <div className='button-row'>
             <button className='save-button' onClick={()=>handleSave()}
             ><img className='save-icon' src={save_icon}/></button>
@@ -100,7 +100,7 @@ function TodoList({theme}) {
         }
     </div>
     </div>
-    <div class='graph'>
+    <div className='graph'>
     <Graph tasks={tasks}/>
     </div>
     </div>
