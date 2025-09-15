@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './pagesetting.css'
 
 function MotivationalQuotes ({quote, theme, onClick,})
@@ -25,6 +25,21 @@ function Settings({theme, setTheme, quote, setQuote}) {
     setQuote(text); // cập nhật state App
     localStorage.setItem("quoteConfig", JSON.stringify({ quote: text })); // lưu
   };
+  useEffect(() => {
+  const saved = localStorage.getItem("appConfig");
+  if (saved) {
+    const parsed = JSON.parse(saved);
+    setTheme(parsed.theme || "theme-light");
+  }
+}, []);
+
+useEffect(() => {
+  const saved = localStorage.getItem("quoteConfig");
+  if (saved) {
+    const parsed = JSON.parse(saved);
+    setQuote(parsed.quote || "Discipline is the key");
+  }
+}, []);
 
   return (
     <div className='settings-row'>
